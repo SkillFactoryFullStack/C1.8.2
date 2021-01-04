@@ -34,17 +34,18 @@ jQuery.prototype.class = function(name) {
 }
 
 
-// Задание 2
-// Написать метод jQuery.prototype.text(), который возвращает 
-// или изменяет текстовое содержимое выбранных элементов.
+// Task 2
+// Write a jQuery.prototype.text () method that returns
+// or changes the text content of the selected items.
 
 jQuery.prototype.text = function(newText){
-	// Если в функцию ничего не передается, возвращаем
-	// текстовое содержимое, иначе изменяем его.
+	// If nothing is passed to the function, return
+	// text content, otherwise change it.
 	if (newText)
 			this.each(element => element.innerText = newText);
 	return this;
 }
 
 const $ = (e) => new jQuery(e);
+$('button').hide().show().click(e => console.log(e)).class('name')
 $('h1').text("Привет");
